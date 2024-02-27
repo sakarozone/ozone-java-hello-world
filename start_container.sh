@@ -8,6 +8,6 @@ set -uo pipefail
 # Import environment variables from .env
 set -o allexport && source .env && set +o allexport
 
-echo "Starting container for image '$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG', exposing port 8123/tcp"
-docker run -p 8123:8123 "$DOCKER_IMAGE_NAME":"$DOCKER_IMAGE_TAG"
+echo "Starting container for image '$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG', exposing port 3000/tcp"
+docker run -p 3000:3000 "$DOCKER_IMAGE_NAME":"$DOCKER_IMAGE_TAG"
 

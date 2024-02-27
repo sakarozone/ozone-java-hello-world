@@ -22,5 +22,5 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /usr/src/myapp/target/app.jar .
 
-EXPOSE 8123
+EXPOSE 3000
 ENTRYPOINT ["java", "-jar", "./app.jar"]
